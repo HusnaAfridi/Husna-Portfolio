@@ -1,0 +1,40 @@
+.journey__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.journey__item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+}
+
+.journey__item--in-progress {
+  border-color: rgba(45, 212, 191, 0.35);
+}
+
+.journey__num {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.journey__item h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .journey__list {
+    grid-template-columns: 1fr;
+  }
+}
